@@ -8,7 +8,42 @@ st.set_page_config(page_title="NIL Earnings Dashboard", layout="wide")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("Athletes_Earnings_Estimates.csv")
+    df = pd.read_csv("Athletes_Earnings_Estimates.csv")
+    
+    # Built-in mappings to handle legacy CSV files without crashing
+    gender_map = {
+        "Baseball": "Men's", "Women's Basketball": "Women's", "Football": "Men's", "Men's Basketball": "Men's",
+        "Fencing": "Coed / Open", "Rifle": "Coed / Open", "Men's volleyball": "Men's", "Bowling": "Coed / Open",
+        "Rowing": "Women's", "Field hockey": "Women's", "Men's gymnastics": "Men's", "Men's ice hockey": "Men's",
+        "Women's ice hockey": "Women's", "Men's tennis": "Men's", "Women's lacrosse": "Women's",
+        "Men's swimming/diving": "Men's", "Men's soccer": "Men's", "Men's lacrosse": "Men's",
+        "Women's tennis": "Women's", "Women's golf": "Women's", "Women's volleyball": "Women's",
+        "Softball": "Women's", "Women's soccer": "Women's", "Women's swimming/diving": "Women's",
+        "Women's track/cross country": "Women's", "Men's track/cross country": "Men's",
+        "Wrestling": "Men's", "Women's gymnastics": "Women's", "Men's golf": "Men's"
+    }
+    
+    category_map = {
+        "Baseball": "Team & Ball Sports", "Women's Basketball": "Team & Ball Sports", "Football": "Contact & Combat",
+        "Men's Basketball": "Team & Ball Sports", "Fencing": "Precision & Individual", "Rifle": "Precision & Individual",
+        "Men's volleyball": "Team & Ball Sports", "Bowling": "Precision & Individual", "Rowing": "Aquatic",
+        "Field hockey": "Team & Ball Sports", "Men's gymnastics": "Precision & Individual",
+        "Men's ice hockey": "Contact & Combat", "Women's ice hockey": "Contact & Combat",
+        "Men's tennis": "Precision & Individual", "Women's lacrosse": "Team & Ball Sports",
+        "Men's swimming/diving": "Aquatic", "Men's soccer": "Team & Ball Sports", "Men's lacrosse": "Contact & Combat",
+        "Women's tennis": "Precision & Individual", "Women's golf": "Precision & Individual",
+        "Women's volleyball": "Team & Ball Sports", "Softball": "Team & Ball Sports", "Women's soccer": "Team & Ball Sports",
+        "Women's swimming/diving": "Aquatic", "Women's track/cross country": "Precision & Individual",
+        "Men's track/cross country": "Precision & Individual", "Wrestling": "Contact & Combat",
+        "Women's gymnastics": "Precision & Individual", "Men's golf": "Precision & Individual"
+    }
+
+    if "Gender" not in df.columns:
+        df["Gender"] = df["Sport"].map(gender_map).fillna("Coed / Open")
+    if "Category" not in df.columns:
+        df["Category"] = df["Sport"].map(category_map).fillna("Precision & Individual")
+        
+    return df
 
 df = load_data()
 
