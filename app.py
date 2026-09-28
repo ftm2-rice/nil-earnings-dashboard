@@ -97,7 +97,7 @@ fig.update_layout(
     margin=dict(l=20, r=20, t=120, b=40)
 )
 
-# Customize Left Panel X-Axis & Y-Axis
+# Customize Left Panel X-Axis & Y-Axis with dark explicit tickfonts
 fig.update_xaxes(
     side="top",
     showgrid=True,
@@ -106,6 +106,7 @@ fig.update_xaxes(
     tickformat="$,d",
     tickvals=[200000, 400000, 600000],
     range=[0, 700000],
+    tickfont=dict(color="#666666", size=11, family="Helvetica, Arial, sans-serif"),
     row=1, col=1
 )
 
@@ -115,10 +116,11 @@ fig.update_yaxes(
     linewidth=1, 
     gridcolor="rgba(0,0,0,0)", 
     range=[-21.5, 3.5], 
+    tickfont=dict(color="#333333", size=11, family="Helvetica, Arial, sans-serif"),
     row=1, col=1
 )
 
-# Customize Right Panel X-Axis & Y-Axis
+# Customize Right Panel X-Axis & Y-Axis with dark explicit tickfonts
 fig.update_xaxes(
     side="top",
     showgrid=True,
@@ -127,6 +129,7 @@ fig.update_xaxes(
     tickformat="$,d",
     tickvals=[5000, 10000, 15000, 20000],
     range=[0, 24000],
+    tickfont=dict(color="#666666", size=11, family="Helvetica, Arial, sans-serif"),
     row=1, col=2
 )
 
@@ -135,6 +138,7 @@ fig.update_yaxes(
     linecolor="#333333", 
     linewidth=1, 
     gridcolor="rgba(0,0,0,0)", 
+    tickfont=dict(color="#333333", size=11, family="Helvetica, Arial, sans-serif"),
     row=1, col=2
 )
 
