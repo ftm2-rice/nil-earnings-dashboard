@@ -1,0 +1,30 @@
+Sport,Earnings,Panel,Gender,Category
+Baseball,60000,Major,Men's,Team & Ball Sports
+Women's Basketball,170000,Major,Women's,Team & Ball Sports
+Football,420000,Major,Men's,Contact & Combat
+Men's Basketball,660000,Major,Men's,Team & Ball Sports
+Fencing,300,Nonrevenue,Coed / Open,Precision & Individual
+Rifle,500,Nonrevenue,Coed / Open,Precision & Individual
+Men's volleyball,1200,Nonrevenue,Men's,Team & Ball Sports
+Bowling,1500,Nonrevenue,Coed / Open,Precision & Individual
+Rowing,2000,Nonrevenue,Women's,Aquatic
+Field hockey,2500,Nonrevenue,Women's,Team & Ball Sports
+Men's gymnastics,4500,Nonrevenue,Men's,Precision & Individual
+Men's ice hockey,5200,Nonrevenue,Men's,Contact & Combat
+Women's ice hockey,5500,Nonrevenue,Women's,Contact & Combat
+Men's tennis,6000,Nonrevenue,Men's,Precision & Individual
+Women's lacrosse,6200,Nonrevenue,Women's,Team & Ball Sports
+Men's swimming/diving,6500,Nonrevenue,Men's,Aquatic
+Men's soccer,7000,Nonrevenue,Men's,Team & Ball Sports
+Men's lacrosse,7500,Nonrevenue,Men's,Contact & Combat
+Women's tennis,8000,Nonrevenue,Women's,Precision & Individual
+Women's golf,8500,Nonrevenue,Women's,Precision & Individual
+Women's volleyball,10500,Nonrevenue,Women's,Team & Ball Sports
+Softball,11500,Nonrevenue,Women's,Team & Ball Sports
+Women's soccer,12500,Nonrevenue,Women's,Team & Ball Sports
+Women's swimming/diving,13500,Nonrevenue,Women's,Aquatic
+Women's track/cross country,14000,Nonrevenue,Women's,Precision & Individual
+Men's track/cross country,15500,Nonrevenue,Men's,Precision & Individual
+Wrestling,16000,Nonrevenue,Men's,Contact & Combat
+Women's gymnastics,21000,Nonrevenue,Women's,Precision & Individual
+Men's golf,22000,Nonrevenue,Men's,Precision & Individual
